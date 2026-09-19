@@ -1,8 +1,11 @@
 :root {
-  --color-black: #000000;
-  --color-turquoise: #00acac;
+  --color-primary: #000000;
+  --color-secondary: #00acac;
+  --color-background-light: #dfdedc;
+  --color-black: var(--color-primary);
+  --color-turquoise: var(--color-secondary);
   --color-turquoise-dark: #008989;
-  --color-muted: #dfdedc;
+  --color-muted: var(--color-background-light);
   --color-gray: #a6a7a2;
   --color-text: #464545;
   --color-white: #ffffff;
