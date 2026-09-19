@@ -32,6 +32,16 @@
     });
   });
 
+  document.querySelectorAll(".toggle-option").forEach((option) => {
+    option.addEventListener("click", () => {
+      document.querySelectorAll(".toggle-option").forEach((item) => {
+        const isSelected = item === option;
+        item.classList.toggle("is-selected", isSelected);
+        item.setAttribute("aria-pressed", String(isSelected));
+      });
+    });
+  });
+
   document.querySelectorAll("[data-demo-form], [data-contact-form]").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -56,4 +66,3 @@
     sections.forEach((section) => observer.observe(section));
   }
 })();
-

@@ -211,6 +211,11 @@ textarea { resize: vertical; }
 
 :focus-visible { outline: 3px solid rgba(0, 172, 172, 0.55); outline-offset: 3px; }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+}
+
 @media (max-width: 1080px) {
   .primary-navigation { gap: 13px; }
   .nav-link { font-size: 11px; }
@@ -264,4 +269,3 @@ textarea { resize: vertical; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
   .footer-grid > div:first-child { grid-column: 1 / -1; }
 }
-
