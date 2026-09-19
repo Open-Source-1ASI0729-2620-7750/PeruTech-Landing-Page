@@ -1,6 +1,6 @@
-# PeruTech Landing Page
+# Preciazo Landing Page
 
-Primera versión desplegable de la landing page de PeruTech, construida a partir del mockup de referencia para presentar la propuesta de valor, funcionalidades por rol y principales bounded contexts del producto.
+Primera versión desplegable de la landing page de Preciazo, construida a partir del mockup de referencia para presentar la propuesta de valor, funcionalidades por rol y principales bounded contexts del producto.
 
 ## Stack
 
@@ -56,4 +56,3 @@ La página está preparada para publicarse como sitio estático desde la raíz d
 4. Guarda y espera la publicación automática.
 
 Estado actual: repositorio local preparado; no se ha configurado un remoto ni se ha publicado todavía.
-
