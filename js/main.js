@@ -23,34 +23,6 @@
     });
   }
 
-  document.querySelectorAll(".faq-question").forEach((question) => {
-    question.addEventListener("click", () => {
-      const answer = document.getElementById(question.getAttribute("aria-controls"));
-      const isExpanded = question.getAttribute("aria-expanded") === "true";
-      question.setAttribute("aria-expanded", String(!isExpanded));
-      if (answer) answer.hidden = isExpanded;
-    });
-  });
-
-  document.querySelectorAll(".toggle-option").forEach((option) => {
-    option.addEventListener("click", () => {
-      document.querySelectorAll(".toggle-option").forEach((item) => {
-        const isSelected = item === option;
-        item.classList.toggle("is-selected", isSelected);
-        item.setAttribute("aria-pressed", String(isSelected));
-      });
-    });
-  });
-
-  document.querySelectorAll("[data-demo-form], [data-contact-form]").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const status = form.querySelector("[data-form-status], [data-contact-status]");
-      if (status) status.textContent = form.matches("[data-contact-form]") ? "Gracias por escribirnos. Te responderemos pronto." : "¡Listo! Te avisaremos antes del lanzamiento.";
-      form.reset();
-    });
-  });
-
   const currentYear = document.querySelector("[data-current-year]");
   if (currentYear) currentYear.textContent = String(new Date().getFullYear());
 
